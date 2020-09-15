@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         if ( currentFragment == null ) {
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.fragmentContainer, fragments[DEFAULT_OPTION])
+                .add(R.id.fragmentContainer, fragments[DEFAULT_OPTION]!!)
                 .commit()
         }
     }

@@ -1,7 +1,12 @@
 package com.timplesoft.gangame.owned
 
-import androidx.fragment.app.Fragment
+import com.timplesoft.commons.BaseFragment
+import com.timplesoft.gangame.R
 
-class MostOwnedFragment: Fragment() {
+class MostOwnedFragment: BaseFragment() {
+
+    override fun getLayoutResId(): Int {
+        return R.layout.fragment_most_owned
+    }
 
 }

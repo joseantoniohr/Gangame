@@ -1,7 +1,12 @@
 package com.timplesoft.gangame.rated
 
-import androidx.fragment.app.Fragment
+import com.timplesoft.commons.BaseFragment
+import com.timplesoft.gangame.R
 
-class TopRatedFragment: Fragment() {
+class TopRatedFragment: BaseFragment() {
+
+    override fun getLayoutResId(): Int {
+        return R.layout.fragment_top_rated
+    }
 
 }
