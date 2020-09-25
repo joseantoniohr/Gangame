@@ -1,6 +1,12 @@
 package com.timplesoft.gangame
 
-import java.text.FieldPosition
+object PriceFormatter {
+
+    val FORMAT_PRICE = "$ %.2f"
+
+    fun priceFormatted(price : Float) = String.format(FORMAT_PRICE, price)
+
+}
 
 
 data class Deal(var title: String,
@@ -8,7 +14,15 @@ data class Deal(var title: String,
                 var normalPrice: Float,
                 var metacriticScore: Int,
                 var steamRating: Int,
-                var thumb: String)
+                var thumb: String) {
+
+    val salePriceFormatted : String
+        get() = PriceFormatter.priceFormatted(this.salePrice)
+
+    val normalPriceFormatted : String
+        get() = PriceFormatter.priceFormatted(this.normalPrice)
+
+}
 
 data class TopGame(var title: String,
                    var owners: Int,
@@ -16,5 +30,9 @@ data class TopGame(var title: String,
                    var publisher: String,
                    var price: Float,
                    var position: Int,
-                   var thumb: String)
+                   var thumb: String) {
 
+    val priceFormatted : String
+        get() = PriceFormatter.priceFormatted(this.price)
+
+}
