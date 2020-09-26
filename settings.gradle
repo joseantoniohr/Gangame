@@ -1,2 +1,2 @@
-include ':app', ':commons'
+include ':app', ':commons', ':gangame_sdk'
 rootProject.name='Gangame'
